@@ -5,7 +5,7 @@ from torch.nn import Conv2d
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
-dataset = torchvision.datasets.CIFAR10("./dataset", train=False, transform=torchvision.transforms.ToTensor(),
+dataset = torchvision.datasets.CIFAR10("../dataset", train=False, transform=torchvision.transforms.ToTensor(),
                                        download=True)
 
 dataloder = DataLoader(dataset, batch_size=64)
@@ -23,12 +23,13 @@ class TestModel(nn.Module):
 
 testModel = TestModel()
 
-writer = SummaryWriter("logs/18")
+writer = SummaryWriter("logs/18_conv2d")
 step = 0
 for data in dataloder:
     imgs, targets = data
     output = testModel(imgs)
-    print("--------------------------------------------")
+
+    print("-------------"+str(step)+"------/"+str(len(dataloder))+"-------------------------------")
     print(imgs.shape)
     print(output.shape)
     writer.add_images("input", imgs, step)

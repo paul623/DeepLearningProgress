@@ -2,8 +2,7 @@ import  torchvision
 from torch.utils.tensorboard import SummaryWriter
 
 dataset_transform = torchvision.transforms.Compose([
-    torchvision.transforms.ToTensor()
-])
+    torchvision.transforms.ToTensor()])
 
 train_set = torchvision.datasets.CIFAR10(root="./dataset", train=True, transform=dataset_transform, download=True)
 test_set = torchvision.datasets.CIFAR10(root="./dataset", train=False, transform=dataset_transform, download=True)
