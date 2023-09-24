@@ -5,7 +5,7 @@ from model import MyModel
 print("人工智障读取数据中")
 labels = ["airplane", "automobile", "bird", "cat", "deer", "dog", "frog", "horse", "ship", "truck"]
 labels_china = ["飞机", "手机", "鸟", "猫", "鹿", "狗", "青蛙", "马", "船", "卡车"]
-img_path = "imgs/paul.png"
+img_path = "../imgs/paul.png"
 image = Image.open(img_path)
 image = image.convert('RGB')    # png是四通道，除了RGB三通道之外还有一个透明通道，这一步可以适应png、jpg各种格式的图片
 print("...努力判断中....")
