@@ -7,7 +7,7 @@ from torch.utils.tensorboard import SummaryWriter
 from model import MyModel
 import time
 # 定义训练的设备
-device = torch.device("cpu")
+device = torch.device("cuda")
 
 # 准备数据集
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="30306780-e668-4f54-aaa1-3e0163d63ea5" name="ICV-server">
+        <fileTransfer accessType="SFTP" host="10.255.249.187" port="22" sshConfigId="015907c4-5670-449c-a3ea-aafa860ed8ec" sshConfig="zbl@10.255.249.187:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
